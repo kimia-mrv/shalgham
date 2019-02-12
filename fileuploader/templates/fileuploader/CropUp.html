@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+</head>
+<body>
+
+<form action="{% url 'result' %}" method="post" enctype="multipart/form-data">
+{% csrf_token %}
+    <input type="file" name="fileToUpload" id="fileToUpload"><br/>
+    define the region considering (0,0) in the upper left corner:(unit:pixels)<br/>
+    left:<input type="text" name="left" ><br/>
+    upper:<input type="text" name="upper" ><br/>
+    right:<input type="text" name="right" ><br/>
+    lower:<input type="text" name="lower" ><br/>
+    <input type="submit" value="next" name="submit">
+</form>
+
+</body>
+</html>

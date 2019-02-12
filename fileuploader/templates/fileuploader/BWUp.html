@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+</head>
+<body>
+
+<form action="{% url 'result' %}" method="post" enctype="multipart/form-data">
+{% csrf_token %}
+    <input type="file" name="fileToUpload" id="fileToUpload"><br/>
+    <input type="submit" value="next" name="submit">
+</form>
+
+</body>
+</html>

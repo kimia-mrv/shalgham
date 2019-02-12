@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Page</title>
+</head>
+<body>
+
+<form action="{% url 'details' %}" method="post" enctype="multipart/form-data">
+{% csrf_token %}
+    What do you wanna do with your photo ?<br/>
+    <input type="radio" name="whatToDo" value="b_w" id="b_w">
+    Black and White<br/>
+    <input type="radio" name="whatToDo" value="crop" id="crop">
+    Crop<br/>
+    <input type="radio" name="whatToDo" value="resize" id="resize">
+    Resize<br/>
+    <input type="radio" name="whatToDo" value="rotate" id="rotate">
+    Rotate<br/>
+    <input type="submit" value="Next" name="submit"><br/>
+</form>
+
+<form action="{% url 'shared' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="submit" value="Shared Photos" name="Shared Photos">
+</form>
+
+</body>
+</html>

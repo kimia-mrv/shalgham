@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edited Photo</title>
+</head>
+<body>
+
+<img src="{{ object.img.url }}"><br/>
+<form action="{% url 'main' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    Do you wanna share this photo?
+    <input type="radio" name="share" value="{{object.id}}" id="{{object.id}}">yes
+    <input type="radio" name="share" value="n" id="n">No<br/>
+    <input type="submit" name="main page" value="main page">
+</form>
+
+</body>
+</html>
